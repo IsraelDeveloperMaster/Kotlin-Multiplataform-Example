@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/compare/v1.1.0...v1.2.0) (2024-12-12)
+
+
+### Features
+
+* Add ListScreen and Movie model ([b3997f5](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/commit/b3997f59f1d993e9b20f22de9db63a4f329db8f4))
+
 ## [1.1.0](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/compare/v1.0.0...v1.1.0) (2024-12-12)
 
 
