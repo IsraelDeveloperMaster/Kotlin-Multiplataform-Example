@@ -1,4 +1,4 @@
-package net.developermaster.kotlinmultiplataform
+package net.developermaster.kotlinmultiplataform.views
 
 
 import androidx.compose.foundation.clickable
@@ -28,14 +28,14 @@ fun App(navController: NavController) {
     MaterialTheme {
         Scaffold {
             padding ->
-            TopBarMainScreen(navController)
+            TopBarAppScreen(navController)
         }
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBarMainScreen(navController: NavController) {
+fun TopBarAppScreen(navController: NavController) {
 
     Spacer(modifier = Modifier.height(100.dp))
 
@@ -48,7 +48,7 @@ fun TopBarMainScreen(navController: NavController) {
                 contentDescription = "back",
                 modifier = Modifier.clickable {
 
-                    navController.popBackStack()
+//                    navController.popBackStack()
                 }
             )
 
