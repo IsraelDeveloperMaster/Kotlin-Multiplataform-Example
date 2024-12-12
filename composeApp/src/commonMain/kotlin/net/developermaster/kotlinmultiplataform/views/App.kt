@@ -18,50 +18,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import net.developermaster.kotlinmultiplataform.navigation.NavigationNavController
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
 @Composable
 @Preview
-fun App(navController: NavController) {
+fun App() {
 
-    MaterialTheme {
-        Scaffold {
-            padding ->
-            TopBarAppScreen(navController)
-        }
-    }
-}
+    NavigationNavController()
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun TopBarAppScreen(navController: NavController) {
-
-    Spacer(modifier = Modifier.height(100.dp))
-
-    TopAppBar( modifier = Modifier.padding(10.dp),
-
-        title = {
-
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = "back",
-                modifier = Modifier.clickable {
-
-//                    navController.popBackStack()
-                }
-            )
-
-            Text(modifier = Modifier.padding(start = 30.dp),
-                text = "Main Screen")
-        },
-
-        actions = {
-//            Text(text = "Ações")
-            Icon(
-                imageVector = Icons.Default.Menu,
-                contentDescription = "Menu"
-            )
-        }
-    )
 }
