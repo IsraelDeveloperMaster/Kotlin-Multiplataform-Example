@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import net.developermaster.kotlinmultiplataform.model.ModelScreen
 import net.developermaster.kotlinmultiplataform.views.InformationScreen
+import net.developermaster.kotlinmultiplataform.views.ListScreen
 import net.developermaster.kotlinmultiplataform.views.LoginScreen
 import net.developermaster.kotlinmultiplataform.views.MainScreen
 
@@ -18,7 +19,7 @@ fun NavigationNavController() {
     val navController = rememberNavController()
 
     //controlador de navegação que recebe o navController para a rota inicial
-    NavHost(navController = navController, startDestination = ModelScreen.LoginScreenObject.route) {
+    NavHost(navController = navController, startDestination = ModelScreen.ListScreenObject.route) {
 
         //rota de loginScreen
         composable(ModelScreen.LoginScreenObject.route) {
@@ -38,6 +39,10 @@ fun NavigationNavController() {
 
         })) {
             InformationScreen(navController, it.arguments?.getString("nome") ?: "Não informado")
+        }
+
+        composable(ModelScreen.ListScreenObject.route) {
+            ListScreen(navController)
         }
 
     }

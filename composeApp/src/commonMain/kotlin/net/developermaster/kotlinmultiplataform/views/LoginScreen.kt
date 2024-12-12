@@ -37,7 +37,8 @@ fun LoginScreen(navcontroller: NavController) {
 
         Button(onClick = {
 
-            navcontroller.navigate(ModelScreen.MainScreenObject.route)
+//            navcontroller.navigate(ModelScreen.MainScreenObject.route)
+            navcontroller.navigate(ModelScreen.ListScreenObject.route)
 
         }) {
 
