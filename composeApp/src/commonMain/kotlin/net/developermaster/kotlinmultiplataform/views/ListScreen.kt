@@ -62,7 +62,8 @@ fun ListScreen(navcontroller: NavController) {
 @Composable
 fun TopBarListScreen(navcontroller: NavController) {
 
-    Spacer(modifier = Modifier.height(200.dp))
+//    Spacer(modifier = Modifier.height(200.dp))
+
 
     TopAppBar(colors = androidx.compose.material3.TopAppBarDefaults.largeTopAppBarColors(),
         modifier = Modifier.padding(10.dp),
@@ -82,7 +83,6 @@ fun TopBarListScreen(navcontroller: NavController) {
 //            Text(text = "Ações")
             Icon(
                 imageVector = Icons.Default.Menu, contentDescription = "Menu"
-
             )
         })
 }
@@ -92,12 +92,6 @@ fun BodyListScreen(paddingValues: PaddingValues) {
 
     var texto by remember { mutableStateOf("") }
 
-    Text(
-        text = "List Screen",
-        color = Color.Red,
-        fontSize = 30.sp,
-        fontFamily = FontFamily.SansSerif,
-    )
     LazyVerticalGrid(
         modifier = Modifier.padding(paddingValues),
         contentPadding = PaddingValues(16.dp),
