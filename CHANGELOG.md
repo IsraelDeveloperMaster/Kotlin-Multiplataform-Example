@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/compare/v1.0.0...v1.1.0) (2024-12-12)
+
+
+### Features
+
+* Initial project setup ([2dde008](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/commit/2dde008ed13ecf29391e0df81f5fc6635d2c34af))
+
 ## 1.0.0 (2024-12-12)
 
 
