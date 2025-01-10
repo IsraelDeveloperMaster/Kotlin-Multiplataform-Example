@@ -19,7 +19,7 @@ fun NavigationNavController() {
     val navController = rememberNavController()
 
     //controlador de navegação que recebe o navController para a rota inicial
-    NavHost(navController = navController, startDestination = ModelScreen.ListScreenObject.route) {
+    NavHost(navController = navController, startDestination = ModelScreen.LoginScreenObject.route) {
 
         //rota de loginScreen
         composable(ModelScreen.LoginScreenObject.route) {
@@ -44,22 +44,5 @@ fun NavigationNavController() {
         composable(ModelScreen.ListScreenObject.route) {
             ListScreen(navController)
         }
-
     }
-
 }
-
-
-/*
-        composable (ModelScreen.MainScreenObject.route)  {
-
-            MainScreen { navController.navigate(ModelDetalhes(nome = it).toString())}
-
-        }   */
-
-//rota de informação
-//
-//    }
-
-
-//composable <ModelScreen.MainScreenObject> {
