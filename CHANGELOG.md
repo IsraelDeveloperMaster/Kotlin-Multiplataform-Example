@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/compare/v1.2.0...v1.3.0) (2025-02-09)
+
+
+### Features
+
+* Update dependencies, add Ktor and Coil, improve UI, and change start destination ([257cf98](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/commit/257cf98d65c960aaf9ed9ee4ca35cffabc4b556e))
+
 ## [1.2.0](https://github.com/IsraelDeveloperMaster/Kotlin-Multiplataform-Example/compare/v1.1.0...v1.2.0) (2024-12-12)
 
 
