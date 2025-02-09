@@ -76,16 +76,17 @@ kotlin {
 
             //coil
             implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
 
             //ktor
             implementation(libs.ktor.client.core)
-
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
 
         }
         iosMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
-            implementation(libs.ktor.client.darwin)
         }
 
         desktopMain.dependencies {

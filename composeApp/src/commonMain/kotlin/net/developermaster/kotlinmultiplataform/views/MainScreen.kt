@@ -31,7 +31,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import coil3.compose.AsyncImage
 import net.developermaster.kotlinmultiplataform.model.ModelScreen
+import net.developermaster.kotlinmultiplataform.model.movies
 
 @Composable
 fun MainScreen(navcontroller: NavController) {
@@ -40,9 +42,9 @@ fun MainScreen(navcontroller: NavController) {
         Modifier.fillMaxSize()
 
             .background(color = Color.Blue),
-            topBar = {
-                TopBarMainScreen(navcontroller)
-            }
+        topBar = {
+            TopBarMainScreen(navcontroller)
+        }
 
     ) { paddingValues ->
 
@@ -58,7 +60,8 @@ fun TopBarMainScreen(navcontroller: NavController) {
 
     Spacer(modifier = Modifier.height(100.dp))
 
-    TopAppBar( modifier = Modifier.padding(10.dp),
+    TopAppBar(
+        modifier = Modifier.padding(10.dp),
         title = {
 
             Icon(
@@ -69,9 +72,11 @@ fun TopBarMainScreen(navcontroller: NavController) {
                 }
             )
 
-            Text(modifier = Modifier.padding(start = 30.dp),
-                text = "Main Screen")
-            },
+            Text(
+                modifier = Modifier.padding(start = 30.dp),
+                text = "Main Screen"
+            )
+        },
 
         actions = {
 //            Text(text = "Ações")
@@ -107,7 +112,8 @@ fun Body(paddingValues: PaddingValues, navcontroller: NavController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        TextField(modifier = Modifier.height(50.dp),
+        TextField(
+            modifier = Modifier.height(50.dp),
             shape = Shapes().medium,
             value = texto,
             onValueChange = {

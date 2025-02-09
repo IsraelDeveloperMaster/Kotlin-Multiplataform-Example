@@ -11,5 +11,6 @@ val movies = (1..100).map {
         id = it,
         title = "Movie $it",
         poster = "https://picsum.photos/200/300?id=$it",
+//        poster = "https://image.tmdb.org/t/p/w780/$it",
     )
 }

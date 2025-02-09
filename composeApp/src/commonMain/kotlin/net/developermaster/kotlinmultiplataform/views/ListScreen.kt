@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -35,12 +36,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import coil3.compose.AsyncImage
+import kotlinmultiplataform.composeapp.generated.resources.Res
 import net.developermaster.kotlinmultiplataform.model.Movie
 import net.developermaster.kotlinmultiplataform.model.movies
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun ListScreen(navcontroller: NavController) {
@@ -103,7 +108,6 @@ fun BodyListScreen(paddingValues: PaddingValues) {
         items(movies, key = { it.id }) {
             MovieItem(movie = it)
         }
-
     }
 }
 
@@ -113,11 +117,24 @@ fun MovieItem(movie: Movie) {
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Box(
+
+/*        Box(
             modifier = Modifier.fillMaxSize().aspectRatio(2 / 3f)
                 .clip(androidx.compose.material3.Shapes().small)
                 .background(MaterialTheme.colorScheme.primaryContainer)
+        )*/
+
+        AsyncImage(
+            model = movie.poster,
+//            model = "https://picsum.photos/200/300",
+            contentDescription = movie.title,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(2 / 3f)
+                .clip(MaterialTheme.shapes.small)
         )
+
         Text(
             text = movie.title,
             modifier = Modifier.padding(16.dp),
